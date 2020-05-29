@@ -105,6 +105,7 @@ public class UalhmisTest {
 	        e.printStackTrace();
 	      }
 	    
+	    
 	    driver.findElement(By.linkText("Ordenadas por cursos")).click();
 	    // 14 | assertElementPresent | xpath=//strong[contains(.,'Herramientas y Métodos de Ingeniería del Software')] | 
 	    try {
