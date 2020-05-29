@@ -33,14 +33,18 @@ public class Test_Reg_Correct {
   public void setUp() {
 	System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 	System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+
 	
+	/**
 	FirefoxOptions firefoxOptions = new FirefoxOptions();
 	firefoxOptions.setHeadless(false);
 	driver = new FirefoxDriver(firefoxOptions);
-	
+	*/
+
 	ChromeOptions chromeOptions = new ChromeOptions();
-	chromeOptions.setHeadless(true);
+	chromeOptions.setHeadless(false);
 	driver = new ChromeDriver(chromeOptions);
+
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
@@ -50,6 +54,8 @@ public class Test_Reg_Correct {
   }
   @Test
   public void test1() {
+
+	  driver.manage().window().setSize(new Dimension(1366, 768));
     driver.get("https://webapp120200527070455.azurewebsites.net/");
     driver.manage().window().setSize(new Dimension(846, 728));
     driver.findElement(By.linkText("Register")).click();
@@ -58,7 +64,27 @@ public class Test_Reg_Correct {
     driver.findElement(By.id("Input_Email")).sendKeys(vars.get("emailrandom").toString());
     driver.findElement(By.id("Input_Password")).sendKeys("Password1_");
     driver.findElement(By.id("Input_ConfirmPassword")).sendKeys("Password1_");
+    try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    
     driver.findElement(By.id("registerSubmit")).click();
+    
+    try {
+        Thread.sleep(700);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    
     driver.findElement(By.id("confirm-link")).click();
+    
+    try {
+        Thread.sleep(800);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    
   }
 }
