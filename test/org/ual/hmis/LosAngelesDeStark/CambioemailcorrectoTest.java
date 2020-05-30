@@ -80,6 +80,7 @@ public class CambioemailcorrectoTest {
       builder.moveToElement(element).release().perform();
     }
     driver.findElement(By.cssSelector(".row:nth-child(3)")).click();
+    driver.findElement(By.id("Input_NewEmail")).clear();
     driver.findElement(By.id("Input_NewEmail")).sendKeys("sample2@ual.es");
     try {
         Thread.sleep(800);
