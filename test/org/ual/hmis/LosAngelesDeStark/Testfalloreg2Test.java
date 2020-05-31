@@ -35,16 +35,16 @@ public class Testfalloreg2Test {
 		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
-		
-		
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		firefoxOptions.setHeadless(false);
 		driver = new FirefoxDriver(firefoxOptions);
+
 		/**
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.setHeadless(false);
 		driver = new ChromeDriver(chromeOptions);
-*/
+		 */
+		
 	    js = (JavascriptExecutor) driver;
 	    vars = new HashMap<String, Object>();
 	  }

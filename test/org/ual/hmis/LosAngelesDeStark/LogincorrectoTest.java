@@ -9,6 +9,7 @@ import static org.hamcrest.core.IsNot.not;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -33,16 +34,15 @@ public class LogincorrectoTest {
 		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
-		
-		/**
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		firefoxOptions.setHeadless(false);
 		driver = new FirefoxDriver(firefoxOptions);
-		*/
-
+		
+		/**
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.setHeadless(false);
 		driver = new ChromeDriver(chromeOptions);
+		*/
 
 	    js = (JavascriptExecutor) driver;
 	    vars = new HashMap<String, Object>();
