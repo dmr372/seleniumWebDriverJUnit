@@ -64,17 +64,7 @@ public class Cambioemailfallo1Test {
     driver.findElement(By.linkText("Hello sample3@ual.es!")).click();
     driver.findElement(By.id("email")).click();
     driver.findElement(By.cssSelector(".row:nth-child(3)")).click();
-    try {
-        Thread.sleep(2000);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
     driver.findElement(By.id("Input_NewEmail")).clear();
-    try {
-        Thread.sleep(2000);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
     driver.findElement(By.id("Input_NewEmail")).sendKeys("sample2");
     {
       WebElement element = driver.findElement(By.id("change-email-button"));

@@ -64,46 +64,11 @@ public class CambioemailcorrectoTest {
     driver.findElement(By.id("login-submit")).click();
     driver.findElement(By.linkText("Hello sample3@ual.es!")).click();
     driver.findElement(By.id("email")).click();
-    {
-      WebElement element = driver.findElement(By.id("personal-data"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).clickAndHold().perform();
-    }
-    {
-      WebElement element = driver.findElement(By.id("personal-data"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
-    }
-    {
-      WebElement element = driver.findElement(By.id("personal-data"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).release().perform();
-    }
     driver.findElement(By.cssSelector(".row:nth-child(3)")).click();
     driver.findElement(By.id("Input_NewEmail")).clear();
     driver.findElement(By.id("Input_NewEmail")).sendKeys("sample2@ual.es");
-    try {
-        Thread.sleep(800);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
     driver.findElement(By.id("change-email-button")).click();
-    try {
-        Thread.sleep(800);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
     driver.findElement(By.cssSelector(".btn-link")).click();
-    try {
-        Thread.sleep(800);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
     driver.findElement(By.linkText("WebApp1")).click();
-    try {
-        Thread.sleep(800);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
   }
 }
