@@ -32,7 +32,7 @@ public class Cambiocontrasenafallo1Test {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+//		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
