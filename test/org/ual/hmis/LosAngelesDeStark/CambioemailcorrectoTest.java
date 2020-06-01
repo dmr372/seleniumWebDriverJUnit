@@ -60,7 +60,7 @@ public class CambioemailcorrectoTest {
     driver.findElement(By.id("Input_Email")).click();
     driver.findElement(By.id("Input_Email")).sendKeys("sample3@ual.es");
     driver.findElement(By.id("Input_Password")).click();
-    driver.findElement(By.id("Input_Password")).sendKeys("Password1_");
+    driver.findElement(By.id("Input_Password")).sendKeys("Password2_");
     driver.findElement(By.id("login-submit")).click();
     driver.findElement(By.linkText("Hello sample3@ual.es!")).click();
     driver.findElement(By.id("email")).click();

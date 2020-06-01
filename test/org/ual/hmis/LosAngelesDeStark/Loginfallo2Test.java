@@ -36,7 +36,7 @@ public class Loginfallo2Test {
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
-		firefoxOptions.setHeadless(false);
+		firefoxOptions.setHeadless(true);
 		driver = new FirefoxDriver(firefoxOptions);
 		
 		/**
