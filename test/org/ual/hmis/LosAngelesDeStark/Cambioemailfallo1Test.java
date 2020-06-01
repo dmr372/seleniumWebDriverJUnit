@@ -33,7 +33,7 @@ public class Cambioemailfallo1Test {
   @Before
   public void setUp() {
 //		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		firefoxOptions.setHeadless(false);
@@ -59,7 +59,7 @@ public class Cambioemailfallo1Test {
     driver.findElement(By.linkText("Login")).click();
     driver.findElement(By.id("Input_Email")).click();
     driver.findElement(By.id("Input_Email")).sendKeys("sample3@ual.es");
-    driver.findElement(By.id("Input_Password")).sendKeys("Password1_");
+    driver.findElement(By.id("Input_Password")).sendKeys("Password2_");
     driver.findElement(By.id("login-submit")).click();
     driver.findElement(By.linkText("Hello sample3@ual.es!")).click();
     driver.findElement(By.id("email")).click();
